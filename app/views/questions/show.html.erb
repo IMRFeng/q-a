@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="lead well">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                <img class="media-object" src="<%= @question.gravatar %>" alt="...">
+                </a>
+            </div>
+            
+            <div class="media-body">
+                <h4 class="media-heading"><%= @question.email %> asked:</h4>
+                <%= @question.body %>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div>
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#new-answer-modal">Submit new answer</button>
+            </div>
+
+            <%= render 'home/new_answer_form' %>
+
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                    <img class="media-object" src="http://www.gravatar.com/avatar/424242" alt="...">
+                    </a>
+                </div>
+                
+                <div class="media-body">
+                    <h4 class="media-heading">user@email.com asked:</h4>
+                    Id excepteur aute minim non ipsum ipsum commodo velit ad in. Labore aliqua nostrud non qui. Anim eu minim laboris ex cillum irure eu sit labore magna. Non ad Lorem sit officia ex id anim quis. Consectetur eiusmod non occaecat cupidatat adipisicing minim aliquip sunt laborum enim mollit. Adipisicing sunt proident pariatur dolore nulla voluptate labore laboris enim aliquip fugiat. Adipisicing dolore enim est minim commodo irure excepteur ea in laborum ex sint.
+                </div>
+            </div>
+
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                    <img class="media-object" src="http://www.gravatar.com/avatar/424242" alt="...">
+                    </a>
+                </div>
+                
+                <div class="media-body">
+                    <h4 class="media-heading">user@email.com asked:</h4>
+                    Id excepteur aute minim non ipsum ipsum commodo velit ad in. Labore aliqua nostrud non qui. Anim eu minim laboris ex cillum irure eu sit labore magna. Non ad Lorem sit officia ex id anim quis. Consectetur eiusmod non occaecat cupidatat adipisicing minim aliquip sunt laborum enim mollit. Adipisicing sunt proident pariatur dolore nulla voluptate labore laboris enim aliquip fugiat. Adipisicing dolore enim est minim commodo irure excepteur ea in laborum ex sint.
+                </div>
+            </div>
+
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                    <img class="media-object" src="http://www.gravatar.com/avatar/424242" alt="...">
+                    </a>
+                </div>
+                
+                <div class="media-body">
+                    <h4 class="media-heading">user@email.com asked:</h4>
+                    Id excepteur aute minim non ipsum ipsum commodo velit ad in. Labore aliqua nostrud non qui. Anim eu minim laboris ex cillum irure eu sit labore magna. Non ad Lorem sit officia ex id anim quis. Consectetur eiusmod non occaecat cupidatat adipisicing minim aliquip sunt laborum enim mollit. Adipisicing sunt proident pariatur dolore nulla voluptate labore laboris enim aliquip fugiat. Adipisicing dolore enim est minim commodo irure excepteur ea in laborum ex sint.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

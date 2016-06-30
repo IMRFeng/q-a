@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
-    $(".media").on "click", ->
+    $(".boxes .media").on "click", ->
         document.location = $(this).data("target")
         return false
 

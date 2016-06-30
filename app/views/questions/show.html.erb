@@ -22,44 +22,25 @@
 
             <%= render 'home/new_answer_form' %>
 
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                    <img class="media-object" src="http://www.gravatar.com/avatar/424242" alt="...">
-                    </a>
+            <% @answers.each do |answer| %>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                        <img class="media-object" src="<%= answer.gravatar %>" alt="...">
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <h4 class="media-heading"><%= answer.email %> answered:</h4>
+                        <div><%= time_ago_in_words answer.created_at %> ago</div>
+                        <%= answer.body %>
+                    </div>
                 </div>
-                
-                <div class="media-body">
-                    <h4 class="media-heading">user@email.com asked:</h4>
-                    Id excepteur aute minim non ipsum ipsum commodo velit ad in. Labore aliqua nostrud non qui. Anim eu minim laboris ex cillum irure eu sit labore magna. Non ad Lorem sit officia ex id anim quis. Consectetur eiusmod non occaecat cupidatat adipisicing minim aliquip sunt laborum enim mollit. Adipisicing sunt proident pariatur dolore nulla voluptate labore laboris enim aliquip fugiat. Adipisicing dolore enim est minim commodo irure excepteur ea in laborum ex sint.
-                </div>
-            </div>
+            <% end %>
 
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                    <img class="media-object" src="http://www.gravatar.com/avatar/424242" alt="...">
-                    </a>
-                </div>
-                
-                <div class="media-body">
-                    <h4 class="media-heading">user@email.com asked:</h4>
-                    Id excepteur aute minim non ipsum ipsum commodo velit ad in. Labore aliqua nostrud non qui. Anim eu minim laboris ex cillum irure eu sit labore magna. Non ad Lorem sit officia ex id anim quis. Consectetur eiusmod non occaecat cupidatat adipisicing minim aliquip sunt laborum enim mollit. Adipisicing sunt proident pariatur dolore nulla voluptate labore laboris enim aliquip fugiat. Adipisicing dolore enim est minim commodo irure excepteur ea in laborum ex sint.
-                </div>
-            </div>
-
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                    <img class="media-object" src="http://www.gravatar.com/avatar/424242" alt="...">
-                    </a>
-                </div>
-                
-                <div class="media-body">
-                    <h4 class="media-heading">user@email.com asked:</h4>
-                    Id excepteur aute minim non ipsum ipsum commodo velit ad in. Labore aliqua nostrud non qui. Anim eu minim laboris ex cillum irure eu sit labore magna. Non ad Lorem sit officia ex id anim quis. Consectetur eiusmod non occaecat cupidatat adipisicing minim aliquip sunt laborum enim mollit. Adipisicing sunt proident pariatur dolore nulla voluptate labore laboris enim aliquip fugiat. Adipisicing dolore enim est minim commodo irure excepteur ea in laborum ex sint.
-                </div>
-            </div>
+            <% if @answers.empty? %>
+                <div class="alert alert-info">Nothing here yet, be the first to answer?</div>
+            <% end %>
         </div>
     </div>
 </div>
